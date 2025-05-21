@@ -18,7 +18,6 @@ const navigation = {
             { name: "Ana Sayfa", href: "/" },
             { name: "Hizmetlerimiz", href: "#hizmetler" },
             { name: "Hakkımızda", href: "#hakkimizda" },
-            { name: "Referanslar", href: "#referanslar" },
             { name: "İletişim", href: "#iletisim" },
           ],
         },
@@ -63,23 +62,18 @@ const Underline = `hover:-translate-y-1 border border-dotted rounded-xl p-2.5 tr
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="relative mx-auto grid max-w-7xl items-center justify-center gap-6 p-10 pb-0 md:flex">
+    <footer className="bg-black text-white">
+      <div className="relative mx-auto grid max-w-7xl items-center justify-center gap-6 pb-0 md:flex">
         <Link href="/" className="flex justify-center md:justify-start">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/o%CC%88nem-gu%CC%88venlik-logo.jpg-Vif4tmzMGatq9wnOfP1AGT3DM45gFd.jpeg"
+            src="onem-logo-white-text.png"
             alt="Önem Güvenlik Logo"
-            width={150}
-            height={60}
-            className="h-12 w-auto"
+            width={300}
+            height={120}
+            className="h-52 w-auto"
           />
         </Link>
-        <p className="bg-transparent text-center text-xs leading-4 text-gray-400 md:text-left">
-          Önem Güvenlik ve Kamera Sistemleri A.Ş. olarak, 2008 yılından bu yana Türkiye genelinde güvenlik sektöründe
-          hizmet vermekteyiz. ISO 9001 ve ISO 27001 sertifikalarına sahip firmamız, kaliteli hizmet anlayışıyla müşteri
-          memnuniyetini ön planda tutmaktadır. Uzman mühendis kadromuz ve teknik ekibimizle, en son teknoloji ürünleri
-          kullanarak ev, işyeri, fabrika, okul, AVM ve kamu kurumları için özel güvenlik çözümleri sunuyoruz.
-        </p>
+
       </div>
 
       <div className="mx-auto max-w-7xl px-6 py-10">
@@ -142,15 +136,6 @@ export default function Footer() {
             className={Underline}
           >
             <Instagram className="h-5 w-5" />
-          </Link>
-          <Link
-            aria-label="Facebook"
-            href="https://www.facebook.com/onemguvenlik"
-            rel="noreferrer"
-            target="_blank"
-            className={Underline}
-          >
-            <Facebook className="h-5 w-5" />
           </Link>
           <Link
             aria-label="LinkedIn"

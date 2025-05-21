@@ -1,7 +1,6 @@
 import Hero from "@/components/hero"
 import Hizmetler from "@/components/hizmetler"
 import Hakkimizda from "@/components/hakkimizda"
-import Referanslar from "@/components/referanslar"
 import Iletisim from "@/components/iletisim"
 import CTA from "@/components/cta"
 import StructuredData from "@/components/structured-data"

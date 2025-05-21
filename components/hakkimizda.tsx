@@ -9,7 +9,7 @@ export default function Hakkimizda() {
         title="Hakkımızda"
         description="Önem Güvenlik ve Kamera Sistemleri A.Ş. olarak, sektör tecrübemizle Türkiye genelinde güvenlik sektöründe hizmet vermekteyiz. Kurulduğumuz günden bu yana 100'den fazla kurumsal müşteriye ve 500'den fazla bireysel müşteriye hizmet verdik."
         mainImage={{
-          src: "/security-team-meeting.png",
+          src: "/website-onem.jpeg",
           alt: "Önem Güvenlik Ekibi Toplantı Halinde",
         }}
         secondaryImage={{
@@ -17,7 +17,7 @@ export default function Hakkimizda() {
           alt: "Profesyonel Güvenlik Ekibi",
         }}
         breakout={{
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/o%CC%88nem-gu%CC%88venlik-logo.jpg-Vif4tmzMGatq9wnOfP1AGT3DM45gFd.jpeg",
+          src: "/onem-logo-no-bg.png",
           alt: "Önem Güvenlik Logo",
           title: "Profesyonel Güvenlik Çözümleri",
           description:
@@ -25,33 +25,6 @@ export default function Hakkimizda() {
           buttonText: "Hizmetlerimiz",
           buttonUrl: "#hizmetler",
         }}
-        companiesTitle="Güvendiğiniz Markalar Bizi Tercih Ediyor"
-        companies={[
-          {
-            src: "/client-logo-bank.png",
-            alt: "Türkiye İş Bankası",
-          },
-          {
-            src: "/client-logo-market.png",
-            alt: "Migros",
-          },
-          {
-            src: "/client-logo-municipality.png",
-            alt: "İstanbul Büyükşehir Belediyesi",
-          },
-          {
-            src: "/client-logo-mall.png",
-            alt: "Marmara Park AVM",
-          },
-          {
-            src: "/client-logo-hotel.png",
-            alt: "Hilton Oteller Zinciri",
-          },
-          {
-            src: "/client-logo-factory.png",
-            alt: "Arçelik Fabrikası",
-          },
-        ]}
         achievementsTitle="Rakamlarla Önem Güvenlik"
         achievementsDescription="Profesyonel hizmet anlayışımız ve kaliteli çözümlerimizle güvenlik sektöründe öncü konuma geldik. Müşteri memnuniyeti odaklı yaklaşımımızla sektörde fark yaratıyoruz."
         achievements={[
