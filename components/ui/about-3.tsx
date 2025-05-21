@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 interface About3Props {
   title?: string
@@ -93,48 +94,64 @@ export const About3 = ({
   achievements = defaultAchievements,
 }: About3Props = {}) => {
   return (
-    <section className="py-32">
-      <div className="container mx-auto">
-        <div className="mb-14 grid gap-5 text-center md:grid-cols-2 md:text-left">
-          <h1 className="text-5xl font-semibold">{title}</h1>
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32">
+      <div className="container px-4 mx-auto">
+        <div className="mb-8 md:mb-14 grid gap-4 md:gap-5 text-center md:grid-cols-2 md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold">{title}</h1>
           <p className="text-muted-foreground">{description}</p>
         </div>
-        <div className="grid gap-7 lg:grid-cols-3">
-          <img
-            src={mainImage.src || "/placeholder.svg"}
-            alt={mainImage.alt}
-            className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
-          />
-          <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
-            <div className="flex flex-col justify-between gap-6 rounded-xl bg-muted p-7 md:w-1/2 lg:w-auto">
-              <img src={breakout.src || "/placeholder.svg"} alt={breakout.alt} className="mr-auto h-32" />
+        <div className="grid gap-5 md:gap-7 lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <Image
+              src={mainImage.src || "/placeholder.svg"}
+              alt={mainImage.alt}
+              width={800}
+              height={620}
+              className="w-full h-auto max-h-[620px] rounded-xl object-cover"
+              unoptimized={mainImage.src?.startsWith("http")}
+            />
+          </div>
+          <div className="flex flex-col gap-5 sm:gap-7">
+            <div className="flex flex-col justify-between gap-4 sm:gap-6 rounded-xl bg-muted p-5 sm:p-7">
+              <Image
+                src={breakout.src || "/placeholder.svg"}
+                alt={breakout.alt}
+                width={128}
+                height={128}
+                className="mr-auto h-20 sm:h-32 w-auto"
+                unoptimized={breakout.src?.startsWith("http")}
+              />
               <div>
-                <p className="mb-2 text-lg font-semibold">{breakout.title}</p>
-                <p className="text-muted-foreground">{breakout.description}</p>
+                <p className="mb-2 text-base sm:text-lg font-semibold">{breakout.title}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{breakout.description}</p>
               </div>
-              <Button variant="outline" className="mr-auto" asChild>
+              <Button variant="outline" className="mr-auto mt-2" asChild>
                 <a href={breakout.buttonUrl} target="_blank" rel="noreferrer">
                   {breakout.buttonText}
                 </a>
               </Button>
             </div>
-            <img
-              src={secondaryImage.src || "/placeholder.svg"}
-              alt={secondaryImage.alt}
-              className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
-            />
+            <div className="relative w-full h-48 sm:h-64 md:h-auto">
+              <Image
+                src={secondaryImage.src || "/placeholder.svg"}
+                alt={secondaryImage.alt}
+                fill
+                className="rounded-xl object-cover"
+                unoptimized={secondaryImage.src?.startsWith("http")}
+              />
+            </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-xl bg-muted p-10 md:p-16">
-          <div className="flex flex-col gap-4 text-center md:text-left">
-            <h2 className="text-4xl font-semibold">{achievementsTitle}</h2>
-            <p className="max-w-screen-sm text-muted-foreground">{achievementsDescription}</p>
+        <div className="mt-8 md:mt-12 relative overflow-hidden rounded-xl bg-muted p-6 sm:p-8 md:p-12 lg:p-16">
+          <div className="flex flex-col gap-3 md:gap-4 text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">{achievementsTitle}</h2>
+            <p className="max-w-screen-sm text-sm sm:text-base text-muted-foreground">{achievementsDescription}</p>
           </div>
-          <div className="mt-10 flex flex-wrap justify-between gap-10 text-center">
+          <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-2 md:flex md:flex-wrap md:justify-between gap-6 md:gap-10 text-center">
             {achievements.map((item, idx) => (
-              <div className="flex flex-col gap-4" key={item.label + idx}>
-                <p>{item.label}</p>
-                <span className="text-4xl font-semibold md:text-5xl">{item.value}</span>
+              <div className="flex flex-col gap-2 md:gap-4" key={item.label + idx}>
+                <p className="text-sm sm:text-base">{item.label}</p>
+                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">{item.value}</span>
               </div>
             ))}
           </div>
