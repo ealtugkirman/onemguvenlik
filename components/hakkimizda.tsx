@@ -13,7 +13,7 @@ export default function Hakkimizda() {
           alt: "Önem Güvenlik Ekibi Toplantı Halinde",
         }}
         secondaryImage={{
-          src: "/professional-security-team-meeting.png",
+          src: "/alarm-system.png",
           alt: "Profesyonel Güvenlik Ekibi",
         }}
         breakout={{
