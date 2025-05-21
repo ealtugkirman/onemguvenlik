@@ -7,7 +7,7 @@ export default function CTA() {
     <section className="bg-blue-700 text-white">
       <CTASection
         badge={{
-          text: "15 Yıllık Deneyim",
+          text: "Güvenlik Önemlidir",
         }}
         title="Güvenliğinizi Profesyonellere Emanet Edin"
         description="Uzman ekibimiz ve en son teknoloji ürünlerimizle ev, işyeri ve kurumsal alanlarınız için özel güvenlik çözümleri sunuyoruz. Hemen ücretsiz keşif randevusu alın, size özel teklifimizi sunalım."
